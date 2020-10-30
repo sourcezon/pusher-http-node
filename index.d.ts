@@ -1,4 +1,5 @@
-import { Response } from "node-fetch"
+import { Response } from 'node-fetch';
+import * as http from 'http';
 
 export = Pusher
 
@@ -135,7 +136,7 @@ declare namespace Pusher {
   }
 
   export class WebHook {
-    constructor(token: Token, request: request.Request)
+    constructor(token: Token, request: Request)
 
     isValid(extraTokens?: Token | Array<Token>): boolean
     isContentTypeValid(): boolean
@@ -144,6 +145,4 @@ declare namespace Pusher {
     getEvents(): Array<Event>
     getTime(): Date
   }
-
-  export type Response = Response
 }
